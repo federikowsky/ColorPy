@@ -1,6 +1,6 @@
 from pycolor import FG, BG
 
-def prova():
+def test():
     # FG._palette
     # FG._rainbow_palette
     # FG._color_legend
@@ -9,27 +9,24 @@ def prova():
     # BG._rainbow_palette
     # BG._color_legend
 
-    print(FG.Aquamarine2, "ciaooo", FG.RESET)
-    print(FG.num2escape(78), "ciaooo", FG.RESET)
+    print(FG.Aquamarine2, "hellooo", FG.RESET)
+    print(FG.num2escape(78), "hellooo", FG.RESET)
 
-    print(FG.blink(f"{FG.SeaGreen3}ciaooooooooooo{FG.RESET}"))
-    print(FG.underline("ciaooooooooooo"))
-    print(FG.bold("ciaooooooooooo"))
-    print(FG.dim("ciaooooooooooo"))
-    print(FG.italic("ciaooooooooooo"))
-    print(FG.invert("ciaooooooooooo"))
-    print(FG.hidden("ciaooooooooooo"))
-    print(FG.strikethrough("ciaooooooooooo"))
+    print(FG.blink(f"{FG.SeaGreen3}hellooooooooooo{FG.RESET}"))
+    print(FG.underline("hellooooooooooo"))
+    print(FG.bold("hellooooooooooo"))
+    print(FG.dim("hellooooooooooo"))
+    print(FG.italic("hellooooooooooo"))
+    print(FG.invert("hellooooooooooo"))
+    print(FG.hidden("hellooooooooooo"))
+    print(FG.strikethrough("hellooooooooooo"))
 
-    print(f"{FG.BOLD} # Set style to bold, red foreground.{FG.BOLD_RST}")
+    print(f"{FG.BOLD + FG.UNDERLINE + FG.GREEN + BG.rgb2escape(0, 255, 255)} Hello World {FG.RESET_ALL} hellooo")
+    print(f"{FG.hsl2escape(60, 100, 25) + BG.rgb2escape(255, 255, 255)} Hello World {FG.RESET + BG.RESET}")
     print("\x1b[5;31m # Set style to bold, red foreground.")
-    print("\x1b[5;32m # Set style to bold, red foreground.")
-    print("\x1b[5;33m # Set style to bold, red foreground.")
-    print("\x1b[4;33m # Set style to bold, red foreground.")
-    print("\x1b[38;2;0;0;255m # Set style\x1b[0m")
-    print("\x1b[1;37;46m # Set style to dimmed black foreground with red background.\33[22m ciaoooo")
-
-    
+    print("\x1b[5;32m # Set style to bold, green foreground.")
+    print("\x1b[5;33m # Set style to bold, yellow foreground.")
+    print("\x1b[4;33m # Set style to underline, yellow foreground.\x1b[0m")
     
 if __name__ == "__main__":
-    prova()
+    test()

@@ -490,7 +490,7 @@ class Fore(TextStyle):
     INVERT, INVERT_RST = "\33[7m", "\33[27m"
     HIDDEN, HIDDEN_RST = "\33[8m", "\33[28m"
     STRIKETHROUGH, STRIKETHROUGH_RST = "\33[9m", "\33[29m"
-    
+
     def __init__(self):
         super().__init__(self.__ESCAPE, self.__ESCAPE24BIT, self.RESET)
     
