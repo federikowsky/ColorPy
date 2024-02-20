@@ -5,9 +5,9 @@ def test():
     # FG._rainbow_palette
     # FG._color_legend
 
-    # BG._palette
-    # BG._rainbow_palette
-    # BG._color_legend
+    BG._palette
+    BG._rainbow_palette
+    BG._color_legend
 
     print(FG.Aquamarine2, "hellooo", FG.RESET)
     print(FG.num2escape(78), "hellooo", FG.RESET)

@@ -255,11 +255,10 @@ class Color():
         pass
 
     def color(self, num: int) -> str:
-        attributes = vars(Color)
-        for attribute, value in attributes.items():
-            if value == num:
-                return attribute
-        raise ValueError(f"Invalid color number: {num}. Number must be between 0 and 255.")
+        attributes = vars(Color).get(num, None)
+        if attributes is None:
+            raise ValueError(f"Invalid color number: {num}. Number must be between 0 and 255.")
+        return attributes
 
 class TextStyle(Color):
     def __init__(self, escape8b: str, escape24b:str, reset: str) -> None:
