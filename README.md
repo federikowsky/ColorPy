@@ -19,14 +19,14 @@ Provides also a `Converter` which contain a set of methods for converting betwee
 ## Usage
 
 ```python
-from PyColor import FG, BG
+from colorism import FG, BG
 
 print(FG.RED + "Hello World" + FG.RESET)
 print(BG.RED + "Hello World" + BG.RESET)
 ```
 
 ```python
-from PyColor import FG, BG
+from colorism import FG, BG
 
 print(FG.bold("Hello World"))
 print(FG.dim("Hello World"))
@@ -34,14 +34,14 @@ print(FG.dim("Hello World"))
 
 ### Advanced Usage
 ```python
-from PyColor import FG, BG
+from colorism import FG, BG
 
 print(f"{FG.RED + BG.YELLOW}Hello World {FG.RESET + BG.RESET}")
 print(f"{FG.BOLD + FG.UNDERLINE + FG.GREEN + BG.rgb2escape(0, 255, 255)} Hello World. {FG.RESET_ALL}")
 ```
 
 ```python
-from PyColor import FG, BG
+from colorism import FG, BG
 
 print(f"{FG.hsl2escape(60, 100, 25) + BG.rgb2escape(255, 255, 255)}Hello World {FG.RESET + BG.RESET}")
 ```
