@@ -1,4 +1,4 @@
-from pycolor import FG, BG
+from colorism import FG, BG
 
 def test():
     # FG._palette

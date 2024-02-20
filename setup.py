@@ -1,13 +1,18 @@
 from setuptools import setup, find_packages
 
+with open('README.md', 'r') as f:
+    long_description = f.read()
+
 setup(
-    name='pycolor',
+    name='colorism',
     version='1.0',
     packages=find_packages(),
     description='A Python package for color formatting in the terminal.',
     author='federikowsky',
     license='MIT',
     url='https://github.com/federikowsky/pycolor',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

@@ -1,5 +1,5 @@
+from colorism import Converter
 import colorsys
-from pycolor import Converter
 
 if __name__ == '__main__':
     C = Converter()
