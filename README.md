@@ -1,4 +1,4 @@
-# PyColor
+# Colorism
 
 ## Overview
 
